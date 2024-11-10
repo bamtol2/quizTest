@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainPage from '@/components/mainPage.vue';  
 import NextPage from '@/components/nextPage.vue';  
 import GiftPage from '@/components/giftPage.vue';
+import FinalPage from '@/components/finalPage.vue';
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/gift-page',
     name: 'GiftPage',
     component: GiftPage
+  },
+  {
+    path: '/final',
+    name: 'FinalPage',
+    component: FinalPage
   }
 ];
 

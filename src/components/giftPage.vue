@@ -24,6 +24,9 @@
       <p v-if="currentStep >= 5">사실.. 오늘 생일인 친구는 없다고 들었어요..!</p>
       <p v-if="currentStep >= 6">아까 선물을 주고 갔다고 들었는데 그걸 한번 열어보실래요?!</p>
 
+      <!-- "열어본 다음에 클릭!!" 버튼 추가 -->
+      <button v-if="currentStep >= 6" @click="goToFinalPage" class="gift-button">열어본 다음에 클릭!!</button>
+
       <!-- 오답일 때 메시지 출력 -->
       <p v-if="showIncorrectMessage">땡! 틀렸습니다</p>
 
@@ -63,6 +66,9 @@ export default {
     },
     backToMainPage() {
       this.$router.push({ name: 'MainPage' });
+    },
+    goToFinalPage() {
+      this.$router.push({ name: 'FinalPage' }); // final.vue로 이동
     }
   }
 };
