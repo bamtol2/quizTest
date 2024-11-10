@@ -1,9 +1,6 @@
 {
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "/index.html",
-      "permanent": false
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
